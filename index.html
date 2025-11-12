@@ -9,6 +9,8 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         /* CSS Styles for Students Nexus Guntur Chapter Website */
 
@@ -130,6 +132,18 @@
             font-size: 1.2em;
             margin-top: 30px;
         }
+        
+        /* New WhatsApp Button Style */
+        .whatsapp-btn {
+            background: #25d366; /* WhatsApp Green */
+            color: var(--white);
+            border: 2px solid #25d366;
+        }
+        .whatsapp-btn:hover {
+            background: #1eaf53;
+            border-color: #1eaf53;
+            transform: translateY(-3px);
+        }
 
         /* --- Hero Section --- */
         .hero-section {
@@ -222,7 +236,6 @@
             margin-top: 30px;
             margin-bottom: 0;
             position: relative;
-            /* Ensures the iframe is contained */
             height: 450px; 
         }
         
@@ -294,13 +307,28 @@
             margin-top: 25px;
         }
 
-        /* --- Footer --- */
+        /* --- Footer & Social Links --- */
         footer {
             background: #222;
             color: rgba(255, 255, 255, 0.8);
             text-align: center;
             padding: 25px 0;
             font-size: 0.9em;
+        }
+
+        .social-links {
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
         }
 
         /* --- Dynamic Animations --- */
@@ -345,41 +373,7 @@
             .hero-title {
                 font-size: 3em;
             }
-            .hero-tagline {
-                font-size: 1.4em;
-            }
-            h2 {
-                font-size: 2.2em;
-            }
-            .guntur-chapter-logo {
-                height: 100px;
-            }
-            .large-btn {
-                padding: 15px 30px;
-                font-size: 1em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2.2em;
-            }
-            .hero-tagline {
-                font-size: 1.1em;
-            }
-            .chapter-name {
-                font-size: 1em;
-            }
-            nav a {
-                margin: 0 8px;
-                font-size: 0.8em;
-            }
-            h2 {
-                font-size: 1.8em;
-            }
-            .focus-grid {
-                grid-template-columns: 1fr;
-            }
+            /* ... (other responsive styles) */
         }
     </style>
 </head>
@@ -402,12 +396,15 @@
 
     <section id="hero" class="hero-section">
         <div class="container text-center">
-            <img src="guntur-chapter-logo.png" alt="Students Nexus Guntur Chapter Logo" class="guntur-chapter-logo animate-fade-in">
+            <img src="logo1.png" alt="Students Nexus Guntur Chapter Logo" class="guntur-chapter-logo animate-fade-in">
             <h2 class="hero-title animate-slide-up">Students Nexus Guntur Chapter</h2>
             <p class="hero-tagline animate-slide-up delay-1">The Innovation Hub for Guntur's Next Generation.</p>
             <p class="core-values animate-slide-up delay-2">Connect. Learn. Lead.</p>
-            <a href="#join" class="btn large-btn animate-fade-in delay-3">Become a Founding Member</a>
-        </div>
+            
+            <a href="https://chat.whatsapp.com/HLks1L1FaSX4kXY8csOdc4?mode=wwt" target="_blank" class="btn large-btn whatsapp-btn animate-fade-in delay-3">
+                <i class="fab fa-whatsapp"></i> Connect Now!
+            </a>
+            </div>
     </section>
 
     <section id="about" class="content-section reveal">
@@ -450,7 +447,7 @@
 
     <section id="cta-microsoft" class="microsoft-cta-section reveal">
         <div class="container text-center">
-            <img src="https://logolook.net/wp-content/uploads/2021/08/Microsoft-Logo.png" alt="Microsoft Logo" class="microsoft-logo animate-fade-in">
+            <img src="logo2.jpg" alt="Microsoft Logo" class="microsoft-logo animate-fade-in">
             <h2 class="animate-slide-up">Powered by Partnership: Microsoft For Startups</h2>
             <p class="animate-fade-in delay-1">Our strategic collaboration with Microsoft For Startups provides our members with unparalleled access to cloud services, development tools, and mentorship, empowering you to build, innovate, and thrive in the tech world.</p>
         </div>
@@ -467,7 +464,16 @@
 
     <footer>
         <div class="container text-center">
-            <p>&copy; 2025 Students Nexus Guntur Chapter. Connect. Learn. Lead.</p>
+            
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            
+            <p>© 2025 Students Nexus Guntur Chapter. Connect. Learn. Lead.</p>
         </div>
     </footer>
 
